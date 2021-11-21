@@ -15,16 +15,11 @@ class TopNav extends Component {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                       {this.props.children}
                     </ul>
-{/*
-                    <form className="d-flex">
-                        <input name="songName" className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-*/}
                     <a href="https://github.com/adafycheng" target="_blank"><img src="/images/github.png" class="icon" /></a>&nbsp;
-                    <a href="https://linkedin.com/in/adafycheng/" target="_blank"><img src="/images/linkedin.png" class="icon" /></a>&nbsp;
+                    <a href="https://linkedin.com/in/adafycheng" target="_blank"><img src="/images/linkedin.png" class="icon" /></a>&nbsp;
                     <a href="https://stackoverflow.com/story/adafycheng" target="_blank"><img src="/images/stackoverflow.png" class="icon" /></a>&nbsp;
-                    <a href="https://twitter.com/adafycheng/" target="_blank"><img src="/images/twitter.png" class="icon" /></a>&nbsp;
+                    <a href="https://twitter.com/adafycheng" target="_blank"><img src="/images/twitter.png" class="icon" /></a>&nbsp;
+                    <a href="https://g.dev/adafycheng" target="_blank"><img src="/images/gdev.png" class="icon" /></a>&nbsp;
                 </div>
             </div>
         </Nav>
