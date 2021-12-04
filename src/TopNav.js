@@ -15,11 +15,12 @@ class TopNav extends Component {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                       {this.props.children}
                     </ul>
-                    <a href="https://github.com/adafycheng" target="_blank"><img src="/images/github.png" class="icon" /></a>&nbsp;
-                    <a href="https://linkedin.com/in/adafycheng" target="_blank"><img src="/images/linkedin.png" class="icon" /></a>&nbsp;
-                    <a href="https://stackoverflow.com/story/adafycheng" target="_blank"><img src="/images/stackoverflow.png" class="icon" /></a>&nbsp;
-                    <a href="https://twitter.com/adafycheng" target="_blank"><img src="/images/twitter.png" class="icon" /></a>&nbsp;
-                    <a href="https://g.dev/adafycheng" target="_blank"><img src="/images/gdev.png" class="icon" /></a>&nbsp;
+                    <a href="https://github.com/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://linkedin.com/in/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://stackoverflow.com/story/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/stackoverflow.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://twitter.com/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/twitter.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://g.dev/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/gdev.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://codepen.io/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/codepen.png" className="icon" alt="" /></a>&nbsp;
                 </div>
             </div>
         </Nav>
