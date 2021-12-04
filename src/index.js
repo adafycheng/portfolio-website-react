@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import './index.css';
+import './index.scss';
 import './TopNav.css';
+import 'reactjs-tabbedpane-component/dist/index.css'
 
 ReactDOM.render(
   <React.StrictMode>

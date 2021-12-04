@@ -1,16 +1,12 @@
+$purple-color: rgb(219, 33, 148);
+
 body {
   margin: 0;
   font-family: -apple-system, 'Times New Roman', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 section {
@@ -19,14 +15,10 @@ section {
   padding: 5em 0 0 0;
 }
 
-.content {
-  width: 80%;
-}
-
 h2 {
-  color: rgb(219, 33, 148);
+  color: $purple-color;
   font-family: cursive;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 h3 {
@@ -39,27 +31,40 @@ textarea {
   width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+/*
+ * Classes
+ */
+
+.btn {
+  background-color: $purple-color;
+  color: #fff;
+  width: auto;
+}
+
+.content {
+  width: 90%;
+}
+
 .intro {
   height: 100%;
   width: 95%;
 }
 
 .introName {
-  color: rgb(219, 33, 148);
+  color: $purple-color;
   font-family: cursive;
   font-size: 2em;
-}
-
-.btn {
-  background-color: rgb(219, 33, 148);
-  color: #fff;
-  width: auto;
 }
 
 .profilePic {
   width: 300px;
 }
 
+/*
 .container img {
   height: 100%;
   width: 100%;
@@ -67,3 +72,4 @@ textarea {
   -webkit-mask-image: url(#mask);
   mask-image: url(#mask);
 }
+*/
