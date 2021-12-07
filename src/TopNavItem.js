@@ -3,18 +3,18 @@ import $ from 'jquery';
 
 class TopNavItem extends Component {
 
-    state = {
-        isActive: "" //this.props.active
-    };
+  state = {
+    isActive: "" //this.props.active
+  };
 
-    constructor(props) {
-        super(props);
-        this.clickFunction = this.clickFunction.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.clickFunction = this.clickFunction.bind(this);
+  }
 
-    clickFunction = (e) => {
-        $('.navbar-nav .nav-link').removeClass('active');
-        this.setState({ isActive: "active" });
+  clickFunction = (e) => {
+    $('.navbar-nav .nav-link').removeClass('active');
+    this.setState({ isActive: "active" });
 //        console.log('1: ');
   //      console.log(this.state.isActive);
     //    this.setState({ isActive: true });
@@ -27,15 +27,15 @@ class TopNavItem extends Component {
   }
 
   render() {
-    const { isActive } = this.state;
+    const isActive = this.state.isActive;
 
-    //console.log(this.state.isActive);
+    console.log("isActive: " + isActive);
 
     return (
-        <>
-            <li className="nav-item" key={this.props.keyName}>
-                <a className={`nav-link ${isActive}`}  href={this.props.href} onClick={this.clickFunction}>{this.props.children}</a>
-            </li>
+      <>
+        <li className="nav-item" key={this.props.keyName}>
+          <a className={`nav-link ${isActive}`}  href={this.props.href} onClick={this.clickFunction}>{this.props.children}</a>
+        </li>
       </>
     );
   }
