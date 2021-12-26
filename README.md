@@ -20,7 +20,25 @@ Ref: https://stackoverflow.com/questions/64625050/error-node-sass-version-5-0-0-
 
 ## Build
 
-```bash
+* Build the application.
+```sh
 npm run fuild
 serve -s build
+```
+
+* Verify by opening the following URL in broswer.
+
+```sh
+http://localhost:5000
+```
+
+* Build the docker image.
+```sh
+docker build -f Dockerfile -t portfolio-website .
+```
+
+## Deployment
+
+```sh
+docker run --name portfolio-website -it -p 5001:3000 portfolio-website
 ```
