@@ -28,8 +28,7 @@ class TopNavItem extends Component {
 
   render() {
     const isActive = this.state.isActive;
-
-    console.log("isActive: " + isActive);
+    //console.log("isActive: " + isActive);
 
     return (
       <>

@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ada Cheng's Portfolio Web Site",
   "author": "adafycheng",
   "license": "MIT",
@@ -21,8 +21,9 @@
     "web-vitals": "^2.1.2"
   },
   "overrides": {
+    "css-what": "5.0.1",
     "nth-check": "2.0.1",
-    "css-what": "5.0.1"
+    "svgo": "2.8.0"
   },
   "scripts": {
     "start": "react-scripts start",

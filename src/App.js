@@ -10,7 +10,7 @@ import TopNavItem from './TopNavItem';
 // Tabbed Pane
 import TabbedPaneComponent from 'reactjs-tabbedpane-component'
 
-const contentData = {
+const portfolioData = {
   "contents": [
     {
       "subject": "PCCW Solutions",
@@ -82,7 +82,7 @@ function App() {
                 <h2>My Experience and Skills</h2>
                 <div className="row">
                     <div className="col-md-8">
-                        <TabbedPaneComponent data={contentData} />
+                        <TabbedPaneComponent data={portfolioData} />
                     </div>
                     <div className="col-md-4">
                         <RatingComponent heading="Java" subheading="11 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
