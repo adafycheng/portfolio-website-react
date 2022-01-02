@@ -23,9 +23,10 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          command: monitor
+          command: test
           
   build:
+    needs: security
     runs-on: ubuntu-latest
 
     strategy:
