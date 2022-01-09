@@ -21,9 +21,10 @@
     "web-vitals": "^2.1.2"
   },
   "overrides": {
-    "css-what": "5.0.1",
-    "nth-check": "2.0.1",
-    "svgo": "2.8.0"
+    "css-what": "^5.0.1",
+    "node-forge": "^1.2.0",
+    "nth-check": "^2.0.1",
+    "svgo": "^2.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
