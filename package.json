@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Ada Cheng's Portfolio Web Site",
   "author": "adafycheng",
   "license": "MIT",
@@ -22,6 +22,8 @@
   },
   "overrides": {
     "css-what": "^5.0.1",
+    "follow-redirects": "^1.14.7",
+    "nanoid": "^3.1.32",
     "node-forge": "^1.2.0",
     "nth-check": "^2.0.1",
     "svgo": "^2.8.0"
