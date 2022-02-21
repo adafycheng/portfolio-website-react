@@ -22,6 +22,7 @@ class TopNav extends Component {
                     <a href="https://g.dev/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/gdev.png" className="icon" alt="" /></a>&nbsp;
                     <a href="https://codepen.io/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/codepen.png" className="icon" alt="" /></a>&nbsp;
                     <a href="https://adafycheng.hashnode.dev" target="_blank" rel="noopener noreferrer"><img src="/images/hashnode.png" className="icon" alt="" /></a>&nbsp;
+                    <a href="https://dev.to/adafycheng" target="_blank" rel="noopener noreferrer"><img src="/images/dev-black.png" className="icon" alt="" /></a>&nbsp;
                 </div>
             </div>
         </Nav>
