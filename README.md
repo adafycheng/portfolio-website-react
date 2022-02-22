@@ -67,7 +67,7 @@ Continuous Integration is configured at the first four hosting platforms above s
 ## Deployment
 
 A node.js application can be deployed to server via the following deployment types:
-1. [Node.js application](#1-node-js-application)
+1. [Node.js application](#1-nodejs-application)
 2. [Docker image](#2-docker-image)
 3. [Static pages](#3-static-pages)
 
