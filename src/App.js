@@ -38,7 +38,7 @@ const portfolioData = {
 function App() {
     return (
         <div className="App">
-            <TopNav navTitle="Ada's World">
+            <TopNav navTitle="My Portfolio">
               <TopNavItem href="#main">Home</TopNavItem>
               <TopNavItem href="#about">About</TopNavItem>
               <TopNavItem href="#portfolio">Portfolio</TopNavItem>
@@ -63,7 +63,7 @@ function App() {
                                         <circle fill="#FFFFFF" cx="150" cy="150" r="150"></circle>
                                     </mask>
                                 </defs>
-                                <image width="300" height="300" href="/images/adacheng.jpg" mask="url(#mask)"></image>
+                                <image width="300" height="300" href="/images/adacheng2.jpg" mask="url(#mask)"></image>
                             </svg>
                         </div>
                         <div className="col-md-8">
