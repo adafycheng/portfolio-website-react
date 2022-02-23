@@ -10,7 +10,7 @@
 
 ![Portfolio Web Site Screenshot 4](public/images/PortfolioWebSite4.png)
 
-### Live Demo
+## Live Demo
 
 Available at the following hosting platforms:
 1. Node.js hosted at [Netlify](https://portfolio.adafycheng.dev) (custom domain can be added freely).
@@ -101,3 +101,10 @@ npm start
     ```
 
 2. Copy all the static files in the `build` folder to the web server.
+
+
+## Acknowledgements
+
+1. [Bootstrap with Create React App](https://github.com/facebook/create-react-app).
+2. [React component for rating](https://github.com/adafycheng/reactjs-rating-component)
+3. [React component for tabbed pane](https://github.com/adafycheng/reactjs-tabbedpane-component)
