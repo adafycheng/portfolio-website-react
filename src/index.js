@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import './index.scss';
-import './TopNav.css';
 import 'reactjs-tabbedpane-component/dist/index.css'
+import 'reactjs-topnav-component/dist/index.css'
 
 ReactDOM.render(
   <React.StrictMode>

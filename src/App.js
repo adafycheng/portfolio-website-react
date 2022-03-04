@@ -4,8 +4,7 @@ import './App.css';
 import RatingComponent from 'reactjs-rating-component'
 
 // Top Navigation
-import TopNav from './TopNav';
-import TopNavItem from './TopNavItem';
+import {TopNav, TopNavItem} from 'reactjs-topnav-component'
 
 // Tabbed Pane
 import TabbedPaneComponent from 'reactjs-tabbedpane-component'
@@ -35,10 +34,55 @@ const portfolioData = {
   ]
 }
 
+const linksData = {
+  items: [
+    {
+      alt:  'GitHub',
+      src:  './images/github.png',
+      href: 'https://github.com/adafycheng'
+    },
+    {
+      alt:  'LinkedIn',
+      src:  './images/linkedin.png',
+      href: 'https://linkedin.com/in/adafycheng'
+    },
+    {
+      alt:  'stackoverflow',
+      src:  './images/stackoverflow.png',
+      href: 'https://stackoverflow.com/story/adafycheng'
+    },
+    {
+      alt:  'Twitter',
+      src:  './images/twitter.png',
+      href: 'https://twitter.com/adafycheng'
+    },
+    {
+      alt:  'Google Developer',
+      src:  './images/gdev.png',
+      href: 'https://g.dev/adafycheng'
+    },
+    {
+      alt:  'CodePen',
+      src:  './images/codepen.png',
+      href: 'https://codepen.io/adafycheng'
+    },
+    {
+      alt:  'HashNode',
+      src:  '/images/hashnode.png',
+      href: 'https://adafycheng.hashnode.dev'
+    },
+    {
+      alt:  'dev.to',
+      src:  '/images/dev-black.png',
+      href: 'https://dev.to/adafycheng'
+    }
+  ]
+}
+
 function App() {
     return (
         <div className="App">
-            <TopNav navTitle="My Portfolio">
+            <TopNav navTitle="My Portfolio" links={linksData}>
               <TopNavItem href="#main">Home</TopNavItem>
               <TopNavItem href="#about">About</TopNavItem>
               <TopNavItem href="#portfolio">Portfolio</TopNavItem>
@@ -85,11 +129,13 @@ function App() {
                         <TabbedPaneComponent data={portfolioData} />
                     </div>
                     <div className="col-md-4">
-                        <RatingComponent heading="Java" subheading="11 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="JavaScript" subheading="10 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="Node.js" subheading="6 months" rate="3" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="React" subheading="6 months" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="C#" subheading="6 months" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Web Application Development" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Java" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Spring" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="JavaScript" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Node.js" subheading="1 year" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="React" subheading="1 year" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Python" subheading="6 months" rate="1" headingColor='purple' subheadingColor='orange' starColor="green" />
                     </div>
                 </div>
             </section>
