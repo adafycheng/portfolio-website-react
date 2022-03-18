@@ -16,8 +16,9 @@ Available at the following hosting platforms:
 1. Node.js hosted at [Netlify](https://portfolio.adafycheng.dev) (custom domain can be added freely).
 2. Node.js hosted at [Heroku](https://adacheng-portfolio-website.herokuapp.com).
 3. Node.js hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev).
-4. Docker image hosted at [Google Cloud](https://adafycheng.dev).
-5. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
+4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify Hosting</a> (custom domain can be added).  <a href="4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify</a> (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/">Pay as you go pricing scheme</a> applies.
+5. Docker image hosted at [Google Cloud](https://adafycheng.dev).
+6. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
 
 Continuous Integration is configured at the first four hosting platforms above such that automatic deployment will be triggered when any file is committed into the main branch of the GitHub repository.
 
@@ -105,6 +106,7 @@ npm start
 
 ## Acknowledgements
 
-1. [Bootstrap with Create React App](https://github.com/facebook/create-react-app).
-2. [React component for rating](https://github.com/adafycheng/reactjs-rating-component)
-3. [React component for tabbed pane](https://github.com/adafycheng/reactjs-tabbedpane-component)
+1. [Bootstrap with Create React App](https://www.npmjs.com/package/create-react-app).
+2. [React component for rating](https://www.npmjs.com/package/reactjs-rating-component).
+3. [React component for tabbed pane](https://www.npmjs.com/package/reactjs-tabbedpane-component).
+4. [React component for top navigation bar](https://www.npmjs.com/package/reactjs-topnav-component).
