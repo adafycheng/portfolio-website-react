@@ -16,7 +16,7 @@ Available at the following hosting platforms:
 1. Node.js hosted at [Netlify](https://portfolio.adafycheng.dev) (custom domain can be added freely).
 2. Node.js hosted at [Heroku](https://adacheng-portfolio-website.herokuapp.com).
 3. Node.js hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev).
-4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify Hosting</a> (custom domain can be added).  <a href="4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify</a> (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/">Pay as you go pricing scheme</a> applies.
+4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify Hosting</a> (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/" target="_blank">Pay as you go pricing scheme</a> applies.
 5. Docker image hosted at [Google Cloud](https://adafycheng.dev).
 6. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
 
