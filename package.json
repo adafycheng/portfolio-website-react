@@ -18,7 +18,7 @@
     "reactjs-rating-component": "^1.0.9",
     "reactjs-tabbedpane-component": "^1.0.13",
     "reactjs-topnav-component": "^1.2.1",
-    "sass": "^1.49.8",
+    "sass": "^1.49.9",
     "web-vitals": "^2.1.4"
   },
   "overrides": {
