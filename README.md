@@ -17,10 +17,19 @@ Available at the following hosting platforms:
 2. Node.js hosted at [Heroku](https://adacheng-portfolio-website.herokuapp.com).
 3. Node.js hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev).
 4. Node.js hosted at <a href="https://aws-portfolio.adafycheng.dev/" target="_blank">AWS Amplify Hosting</a> (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/" target="_blank">Pay as you go pricing scheme</a> applies.
-5. Docker image hosted at [Google Cloud](https://adafycheng.dev).
+5. Docker image hosted at [Google Cloud Run](https://adafycheng.dev).  Cloud Build is configured for continuous deployment.
 6. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
 
-Continuous Integration is configured at the first four hosting platforms above such that automatic deployment will be triggered when any file is committed into the main branch of the GitHub repository.
+Continuous Integration is configured at the first five hosting platforms above such that automatic deployment will be triggered when any file is committed into the main branch of the GitHub repository.
+
+| Platform | CI on main | CI on PR |
+| --- | :---: | :---: |
+| Netlify | Yes | Yes |
+| Heroku | Yes | No |
+| Vercel | Yes | Yes |
+| AWS Amplify | Yes | No |
+| Google Cloud Run (Docker) | Yes | No |
+| GitHub Pages | No | No |
 
 
 ## Development
