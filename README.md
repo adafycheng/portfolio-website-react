@@ -94,7 +94,7 @@ Before deployment, it's better to have security scan on the docker image and app
 
 ## Deployment
 
-A node.js application can be deployed to server via the following deployment types:
+A React application can be deployed to server via the following deployment types:
 1. [Node.js application](#1-nodejs-application)
 2. [Docker image](#2-docker-image)
 3. [Static pages](#3-static-pages)
@@ -137,3 +137,4 @@ npm start
 2. [React component for rating](https://www.npmjs.com/package/reactjs-rating-component).
 3. [React component for tabbed pane](https://www.npmjs.com/package/reactjs-tabbedpane-component).
 4. [React component for top navigation bar](https://www.npmjs.com/package/reactjs-topnav-component).
+5. [CI with Snyk using GitHub ](https://blog.adafycheng.dev/ci-with-snyk-using-github-actions).
