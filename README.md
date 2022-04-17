@@ -74,6 +74,24 @@ Continuous Integration is configured at the first five hosting platforms above s
     http://localhost:5000
     ```
 
+## Security Scan
+
+Before deployment, it's better to have security scan on the docker image and apply fix if any vulnerabilities found.
+
+### 1. Docker Image
+
+1. Build the docker image.
+
+    ```sh
+    docker build -f Dockerfile -t portfolio-website .
+    ```
+
+2. Scan the docker image.
+
+    ```sh
+    docker scan portfolio-website
+    ```
+
 ## Deployment
 
 A node.js application can be deployed to server via the following deployment types:
