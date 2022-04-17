@@ -42,6 +42,11 @@ const linksData = {
       href: 'https://github.com/adafycheng'
     },
     {
+      alt:  'GitLab',
+      src:  './images/gitlab.png',
+      href: 'https://gitlab.com/adafycheng'
+    },
+    {
       alt:  'LinkedIn',
       src:  './images/linkedin.png',
       href: 'https://linkedin.com/in/adafycheng'
