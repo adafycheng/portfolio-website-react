@@ -54,7 +54,7 @@ const linksData = {
     {
       alt:  'stackoverflow',
       src:  './images/stackoverflow.png',
-      href: 'https://stackoverflow.com/story/adafycheng'
+      href: 'https://stackoverflow.com/users/16432034/ada-cheng'
     },
     {
       alt:  'Twitter',
