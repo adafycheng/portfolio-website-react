@@ -138,3 +138,5 @@ npm start
 3. [React component for tabbed pane](https://www.npmjs.com/package/reactjs-tabbedpane-component).
 4. [React component for top navigation bar](https://www.npmjs.com/package/reactjs-topnav-component).
 5. [CI with Snyk using GitHub ](https://blog.adafycheng.dev/ci-with-snyk-using-github-actions).
+6. [Dockerizing a Node.js web application](https://blog.adafycheng.dev/dockerizing-a-nodejs-web-application).
+7. [Deploy a Docker image to Google Cloud using Cloud Run](https://blog.adafycheng.dev/deploy-a-docker-image-to-google-cloud-using-cloud-run).
