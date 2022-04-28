@@ -1,12 +1,5 @@
-# This file is a template, and might need editing before it works on your project.
-# To contribute improvements to CI/CD templates, please follow the Development guide at:
-# https://docs.gitlab.com/ee/development/cicd/templates.html
-# This specific template is located at:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
-
-# This is a sample GitLab CI/CD configuration file that should run without any modifications.
-# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
-# it uses echo commands to simulate the pipeline execution.
+# This is a GitLab CI/CD configuration file that builds and test docker image,
+# which is then uploaded to GitLab Container Registry.
 #
 # A pipeline is composed of independent jobs that run scripts, grouped into stages.
 # Stages run in sequential order, but jobs within stages run in parallel.
@@ -18,11 +11,15 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
-build-job:       # This job runs in the build stage, which runs first.
+
+docker-build:
   stage: build
+  variables:
+    IMAGE_TAG: $CI_REGISTRY/$CI_REGISTRY_USER/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - echo "Building docker image..."
+    - docker build -t $IMAGE_TAG .
+    - echo "Build complete."
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
@@ -31,15 +28,33 @@ unit-test-job:   # This job runs in the test stage.
     - sleep 60
     - echo "Code coverage is 90%"
 
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
+trivy-test-job:
+  stage: test
+  image: docker:stable-git
+  before_script:
+    - export VERSION=$(curl --silent "https://api.github.com/repos/aquasecurity/trivy/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
+    - wget https://github.com/aquasecurity/trivy/releases/download/v${VERSION}/trivy_${VERSION}_Linux-64bit.tar.gz
+    - tar zxvf trivy_${VERSION}_Linux-64bit.tar.gz
+  variables:
+    DOCKER_DRIVER: overlay2
+    IMAGE_TAG: $CI_REGISTRY/$CI_REGISTRY_USER/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  allow_failure: true
+  services:
+    - docker:stable-dind
   script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 10
+    - echo "Scanning docker image..."
+    - ./trivy --exit-code 0 --severity HIGH --no-progress --auto-refresh $IMAGE_TAG
+    - ./trivy --exit-code 1 --severity CRITICAL --no-progress --auto-refresh $IMAGE_TAG
     - echo "No lint issues found."
+  cache:
+    directories:
+      - $HOME/.cache/trivy
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  variables:
+    IMAGE_TAG: $CI_REGISTRY/$CI_REGISTRY_USER/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
   script:
     - echo "Deploying application..."
+    - docker push $IMAGE_TAG
     - echo "Application successfully deployed."

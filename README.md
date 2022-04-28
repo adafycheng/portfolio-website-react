@@ -83,23 +83,23 @@ Before deployment, it's better to have security scan on the docker image and app
 1. Build the docker image.
 
     ```sh
-    docker build -f Dockerfile -t portfolio-website .
+    docker build -f Dockerfile -t portfolio-website:latest .
     ```
 
 2. Scan the docker image.
 
     ```sh
-    docker scan portfolio-website
+    docker scan portfolio-website:latest
     ```
 
 ## Deployment
 
 A React application can be deployed to server via the following deployment types:
-1. [Node.js application](#1-nodejs-application)
+1. [React application](#1-react-application)
 2. [Docker image](#2-docker-image)
 3. [Static pages](#3-static-pages)
 
-### 1. Node.js application
+### 1. React application
 
 ```sh
 npm install
