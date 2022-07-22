@@ -101,10 +101,14 @@ A React application can be deployed to server via the following deployment types
 
 ### 1. React application
 
+1. Install and start the application.
+
 ```sh
 npm install
 npm start
 ```
+
+2. Browser at `http://localhost:3000` should be opened for testing.
 
 ### 2. Docker image
 
@@ -119,6 +123,9 @@ npm start
     ```sh
     docker run --name portfolio-website -it -p 5001:3000 -d portfolio-website
     ```
+
+3. Test by opening browser at `http://localhost:5001`.
+
 
 ### 3. Static pages
 
