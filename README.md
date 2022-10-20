@@ -2,6 +2,8 @@
 
 > Build my Portfolio Web Site using React.
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ![Portfolio Web Site Screenshot 1](public/images/PortfolioWebSite1.png)
 
 ![Portfolio Web Site Screenshot 2](public/images/PortfolioWebSite2.png)

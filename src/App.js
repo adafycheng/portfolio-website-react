@@ -85,6 +85,7 @@ const linksData = {
 }
 
 function App() {
+    let pjson = require('../package.json');
     return (
         <div className="App">
             <TopNav navTitle="My Portfolio" links={linksData}>
@@ -179,6 +180,11 @@ function App() {
                         </fieldset>
                     </form>
             </section>
+            <div id="footer">
+                <div>Designed and coded by</div>
+                <div className="author">Ada Cheng</div>
+                <div id="appVersion">Version: { pjson.version }</div>
+            </div>
         </div>
     );
 }
