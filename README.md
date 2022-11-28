@@ -73,7 +73,7 @@ Continuous Integration is configured at the first five hosting platforms above s
 
 6. Verify by opening the following URL in broswer.
     ```sh
-    http://localhost:5000
+    http://localhost:3000
     ```
 
 ## Security Scan
