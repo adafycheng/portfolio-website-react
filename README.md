@@ -16,22 +16,20 @@
 
 Available at the following hosting platforms:
 1. React application hosted at [Netlify](https://netlify-portfolio.adafycheng.dev) (custom domain can be added freely).  [Another Live Demo for GitLab](https://netlify-portfolio-gitlab.adafycheng.dev).
-2. React application hosted at [Heroku](https://adacheng-portfolio-website.herokuapp.com).
-3. React application hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev). [Another Live Demo for GitLab](https://portfolio-website-react-gitlab.vercel.app).
-4. React application hosted at [AWS Amplify Hosting](https://aws-portfolio.adafycheng.dev) (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/" target="_blank">Pay as you go pricing scheme</a> applies.
-5. Docker image hosted at [Google Cloud Run](https://gcp-portfolio.adafycheng.dev).  Cloud Build is configured for continuous deployment.
-6. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
+2. React application hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev). [Another Live Demo for GitLab](https://portfolio-website-react-gitlab.vercel.app).
+3. React application hosted at [AWS Amplify Hosting](https://aws-portfolio.adafycheng.dev) (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/" target="_blank">Pay as you go pricing scheme</a> applies.
+4. Docker image hosted at [Google Cloud Run](https://gcp-portfolio.adafycheng.dev).  Cloud Build is configured for continuous deployment.
+5. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
 
 Continuous Integration is configured at the first five hosting platforms above such that automatic deployment will be triggered when any file is committed into the main branch of the GitHub repository.
 
-| Platform | CI on main | CI on PR | GitHub | GitLab | Bitbucket | Configuration | Email Notification |
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Netlify | Yes | Yes | [Yes](https://netlify-portfolio.adafycheng.dev) | [Yes](https://netlify-portfolio-gitlab.adafycheng.dev) | Yes | Easy | Yes |
-| Heroku | Yes | No | [Yes](https://adacheng-portfolio-website.herokuapp.com) | No | TBC | Medium | No |
-| Vercel | Yes | Yes | [Yes](https://portfolio-website-react-six.vercel.app) | [Yes](https://portfolio-website-react-gitlab.vercel.app) | Yes | Easy | No |
-| AWS Amplify | Yes | No | [Yes](https://aws-portfolio.adafycheng.dev) | TBC | TBC | Medium | No |
-| Google Cloud Run (Docker) | Yes | Yes | [Yes](https://gcp-portfolio.adafycheng.dev) |TBC | TBC | Medium | No |
-| GitHub Pages | No | No | [Yes](https://adafycheng.github.io) | No | No | N/A | No |
+| Platform                  | CI on main | CI on PR |                            GitHub                            |                          GitLab                          | Bitbucket | Configuration | Email Notification |
+|---------------------------|:----------:|:--------:|:------------------------------------------------------------:|:--------------------------------------------------------:|:---------:|:-------------:|:------------------:|
+| Netlify                   |    Yes     |   Yes    |       [Yes](https://netlify-portfolio.adafycheng.dev)        |  [Yes](https://netlify-portfolio-gitlab.adafycheng.dev)  |    Yes    |     Easy      |        Yes         |
+| Vercel                    |    Yes     |   Yes    | [Yes](https://portfolio-website-react-adafycheng.vercel.app) | [Yes](https://portfolio-website-react-gitlab.vercel.app) |    Yes    |     Easy      |         No         |
+| AWS Amplify               |    Yes     |    No    |         [Yes](https://aws-portfolio.adafycheng.dev)          |                           TBC                            |    TBC    |    Medium     |         No         |
+| Google Cloud Run (Docker) |    Yes     |   Yes    |         [Yes](https://gcp-portfolio.adafycheng.dev)          |                           TBC                            |    TBC    |    Medium     |         No         |
+| GitHub Pages              |     No     |    No    |             [Yes](https://adafycheng.github.io)              |                            No                            |    No     |      N/A      |         No         |
 
 
 ## Development
