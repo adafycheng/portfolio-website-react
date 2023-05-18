@@ -80,7 +80,12 @@ const linksData = {
       alt:  'dev.to',
       src:  '/images/dev-black.png',
       href: 'https://dev.to/adafycheng'
-    }
+    },
+  {
+      alt:  'Blogspot',
+      src:  '/images/blogspot.jpg',
+      href: 'https://adafycheng-uk-life.blogspot.com'
+  }
   ]
 }
 
