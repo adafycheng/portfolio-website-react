@@ -18,8 +18,11 @@
     "reactjs-rating-component": "^1.0.9",
     "reactjs-tabbedpane-component": "^1.0.19",
     "reactjs-topnav-component": "^1.2.5",
-    "sass": "^1.56.2",
+    "sass": "^1.64.0",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies" : {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.0-placeholder-for-preset-env.2"
   },
   "overrides": {
     "async": "^3.2.3",
