@@ -16,7 +16,7 @@
 
 Available at the following hosting platforms:
 1. React application hosted at [Netlify](https://netlify-portfolio.adafycheng.dev) (custom domain can be added freely).  [Another Live Demo for GitLab](https://netlify-portfolio-gitlab.adafycheng.dev).
-2. React application hosted at [Vercel](https://portfolio-website-react-six.vercel.app) (custom domain can be added freely if not used in hashnode.dev). [Another Live Demo for GitLab](https://portfolio-website-react-gitlab.vercel.app).
+2. React application hosted at [Vercel](https://portfolio-website-react-adafycheng.vercel.app) (custom domain can be added freely if not used in hashnode.dev). [Another Live Demo for GitLab](https://portfolio-website-react-gitlab.vercel.app).
 3. React application hosted at [AWS Amplify Hosting](https://aws-portfolio.adafycheng.dev) (custom domain can be added).  <a href="https://aws.amazon.com/amplify/pricing/" target="_blank">Pay as you go pricing scheme</a> applies.
 4. Docker image hosted at [Google Cloud Run](https://gcp-portfolio.adafycheng.dev).  Cloud Build is configured for continuous deployment.
 5. Static files hosted at [GitHub Pages](https://adafycheng.github.io) freely.
@@ -69,7 +69,7 @@ Continuous Integration is configured at the first five hosting platforms above s
     serve -s build
     ```
 
-6. Verify by opening the following URL in broswer.
+6. Verify by opening the following URL in browser.
     ```sh
     http://localhost:3000
     ```
@@ -83,14 +83,29 @@ Before deployment, it's better to have security scan on the docker image and app
 1. Build the docker image.
 
     ```sh
-    docker build -f Dockerfile -t portfolio-website:latest .
+    export VERSION_NUMBER=1.0.0
+    docker build -f Dockerfile -t portfolio-website:$VERSION_NUMBER .
     ```
 
 2. Scan the docker image.
 
     ```sh
-    docker scan portfolio-website:latest
+    docker scan portfolio-website:$VERSION_NUMBER
     ```
+
+3. Scan the docker image.
+
+    ```sh
+    export DOCKER_HUB_ID=<replace with docker hub ID>
+    docker tag $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER-release
+    ```
+   
+4. Scan the docker image.
+
+    ```sh
+    docker push $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER-release
+    ```
+
 
 ## Deployment
 
