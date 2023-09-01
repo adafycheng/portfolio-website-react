@@ -1,7 +1,7 @@
-FROM node:20.2-alpine3.16
+FROM node:20.5.1-alpine3.18
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 COPY ./ ./
-RUN npm ci --production
+RUN npm ci --omit=dev
 CMD ["npm", "run", "start"]

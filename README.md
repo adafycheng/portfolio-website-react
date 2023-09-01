@@ -48,6 +48,8 @@ Continuous Integration is configured at the first five hosting platforms above s
     npm install jquery
    
     npm install sass
+   
+    npm install -g serve
     ```
 
 2. Create a React application.
@@ -65,7 +67,6 @@ Continuous Integration is configured at the first five hosting platforms above s
 
 5. Start the application locally.
     ```sh
-    npm install -g serve
     serve -s build
     ```
 
@@ -96,8 +97,7 @@ Before deployment, it's better to have security scan on the docker image and app
 3. Scan the docker image.
 
     ```sh
-    export DOCKER_HUB_ID=<replace with docker hub ID>
-    docker tag $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER-release
+    docker tag portfolio-website:$VERSION_NUMBER $DOCKER_HUB_ID/portfolio-website:$VERSION_NUMBER-release
     ```
    
 4. Scan the docker image.
