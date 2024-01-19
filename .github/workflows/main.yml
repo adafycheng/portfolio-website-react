@@ -54,7 +54,7 @@ jobs:
           path: ./adafycheng.github.io
           ref: 'main'
       # Copy files
-      - run: bash cp -rf build/* ./adafycheng.github.io
+      - run: cp -rf build/* ./adafycheng.github.io
       # Push to GitHub Pages
       - name: setup git config
         run: |
