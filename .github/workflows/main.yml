@@ -56,8 +56,8 @@ jobs:
       - name: Check out from GitHub Pages
         uses: actions/checkout@v3
         with:
-          repository: "$GITHUB_PAGES_REPO"
-          path: "$GITHUB_PAGES_PATH"
+          repository: ${{ GITHUB_PAGES_REPO }}
+          path: ${{ GITHUB_PAGES_PATH }}
           ref: 'main'
       - run: ls -l
       - name: Copy files
