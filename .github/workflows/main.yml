@@ -45,3 +45,17 @@ jobs:
         run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - run: cd build
+      # Push to GitHub Pages
+      - uses: actions/checkout@v3
+        with:
+          repository: adafycheng.github.io
+          ref: 'main'
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
+          git add .
+          git commit
+      - run: git push origin main
+
