@@ -66,29 +66,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - run: npm run build --if-present
-      - name: Extract Version Number of the Application
-        run: |
-          APP_VERSION=`cat package.json | jq -r '.version'`
-          echo "APP_VERSION: $APP_VERSION"
       - name: Check out from GitHub Pages
         uses: actions/checkout@v3
         with:
           repository: ${{ env.GITHUB_PAGES_REPO }}
           path: ${{ env.GITHUB_PAGES_PATH }}
           ref: 'main'
-      - run: ls -l
       - name: Copy files
         run: cp -rf build/* ./$GITHUB_PAGES_PATH
-      - name: setup git config
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
+      - name: Commit and Push to GitHub Pages
         run: |
           APP_VERSION=`cat package.json | jq -r '.version'`
           echo "APP_VERSION: $APP_VERSION"
           cd $GITHUB_PAGES_PATH
-          git config user.name "GitHub Actions Bot"
-          git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
           git switch -c "v$APP_VERSION"
           git add .
           git commit -m "New build"
-      - name: Push to GitHub Pages
-        run: git push origin "v$APP_VERSION"
+          git push origin "v$APP_VERSION"
 
