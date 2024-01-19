@@ -81,6 +81,8 @@ jobs:
         run: cp -rf build/* ./$GITHUB_PAGES_PATH
       - name: setup git config
         run: |
+          APP_VERSION=`cat package.json | jq -r '.version'`
+          echo "APP_VERSION: $APP_VERSION"
           cd $GITHUB_PAGES_PATH
           git config user.name "GitHub Actions Bot"
           git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
