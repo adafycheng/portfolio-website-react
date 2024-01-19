@@ -35,7 +35,7 @@ jobs:
     
     env:
       GITHUB_PAGES_REPO: "adafycheng/adafycheng.github.io"
-      GITHUB_PAGES_PATH: "./adafycheng.github.io"
+      GITHUB_PAGES_PATH: "github_pages"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -53,7 +53,7 @@ jobs:
         run: |
           APP_VERSION=`cat package.json | jq -r '.version'`
           echo "APP_VERSION: $APP_VERSION"
-      - name: Push to GitHub Pages
+      - name: Check out from GitHub Pages
         uses: actions/checkout@v3
         with:
           repository: adafycheng/adafycheng.github.io
