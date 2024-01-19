@@ -49,7 +49,7 @@ jobs:
       # Push to GitHub Pages
       - uses: actions/checkout@v3
         with:
-          repository: adafycheng.github.io
+          repository: adafycheng/adafycheng.github.io
           ref: 'main'
       - name: setup git config
         run: |
