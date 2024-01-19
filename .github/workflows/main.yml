@@ -32,6 +32,10 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
+    
+    env:
+      GITHUB_PAGES_REPO: adafycheng/adafycheng.github.io
+      GITHUB_PAGES_PATH: ./adafycheng.github.io
         
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -46,19 +50,20 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
       - name: Extract Version Number of the Application
-        env:
-          APP_VERSION: cat package.json | jq -r '.version'
-        run: echo "APP_VERSION - $APP_VERSION"
+        run: |
+          echo `cat package.json | jq -r '.version'` >> $APP_VERSION
+          echo "APP_VERSION: $APP_VERSION"
       - name: Push to GitHub Pages
         uses: actions/checkout@v3
         with:
-          repository: adafycheng/adafycheng.github.io
-          path: ./adafycheng.github.io
+          repository: $GITHUB_PAGES_REPO
+          path: $GITHUB_PAGES_PATH
           ref: 'main'
       - name: Copy files
         run: cp -rf build/* ./adafycheng.github.io
       - name: setup git config
         run: |
+          cd $GITHUB_PAGES_PATH
           git config user.name "GitHub Actions Bot"
           git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
           git switch -c "v$APP_VERSION"
