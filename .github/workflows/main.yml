@@ -70,6 +70,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ env.GITHUB_PAGES_REPO }}
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
           path: ${{ env.GITHUB_PAGES_PATH }}
           ref: 'main'
       - name: Copy files to GitHub Pages repo
