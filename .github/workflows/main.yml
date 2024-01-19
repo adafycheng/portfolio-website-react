@@ -56,11 +56,11 @@ jobs:
       - name: Push to GitHub Pages
         uses: actions/checkout@v3
         with:
-          repository: $GITHUB_PAGES_REPO
+          repository: adafycheng/adafycheng.github.io
           path: $GITHUB_PAGES_PATH
           ref: 'main'
       - name: Copy files
-        run: cp -rf build/* ./adafycheng.github.io
+        run: cp -rf build/* $GITHUB_PAGES_PATH
       - name: setup git config
         run: |
           cd $GITHUB_PAGES_PATH
