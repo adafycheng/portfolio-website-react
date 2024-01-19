@@ -32,8 +32,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x, 18.x, 20.x]
-        
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -45,17 +44,51 @@ jobs:
         run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - run: cd build
-      # Push to GitHub Pages
+
+  deploy_github_pages:
+    needs: build
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_PAGES_REPO: adafycheng/adafycheng.github.io
+      GITHUB_PAGES_PATH: github_pages
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+        
+    steps:
       - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          repository: adafycheng.github.io
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - run: npm run build --if-present
+      - name: Check out from GitHub Pages
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ env.GITHUB_PAGES_REPO }}
+          token: ${{ secrets.ACTIONS_GITHUB_TOKEN }}
+          path: ${{ env.GITHUB_PAGES_PATH }}
           ref: 'main'
-      - name: setup git config
+      - name: Copy files to GitHub Pages repo
         run: |
+          rm ./$GITHUB_PAGES_PATH/static/css/*
+          rm ./$GITHUB_PAGES_PATH/static/js/*
+          cp -rf build/* ./$GITHUB_PAGES_PATH
+      - name: Commit and Push to GitHub Pages
+        run: |
+          # Exrtract Application Version
+          APP_VERSION=`cat package.json | jq -r '.version'`
+          echo "APP_VERSION: $APP_VERSION"
+          # Commit and Push
+          cd $GITHUB_PAGES_PATH
           git config user.name "GitHub Actions Bot"
           git config user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
+          git switch -c "v$APP_VERSION"
           git add .
-          git commit
-      - run: git push origin main
+          git commit -m "Deploy $APP_VERSION"
+          git push origin "v$APP_VERSION"
 
