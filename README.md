@@ -2,7 +2,8 @@
 
 > Build my Portfolio Website using React.
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Security Scan using Trivy](https://github.com/adafycheng/portfolio-website-react/actions/workflows/trivy-main.yml/badge.svg)](https://github.com/adafycheng/portfolio-website-react/actions/workflows/trivy-main.yml)
+
 
 ![Portfolio Web Site Screenshot 1](public/images/PortfolioWebSite1.png)
 
