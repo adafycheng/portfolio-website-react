@@ -1,4 +1,4 @@
-name: CI, with security check using Snyk
+name: CI/CD, with security check using Snyk
 
 # Controls when the workflow will run
 on:
