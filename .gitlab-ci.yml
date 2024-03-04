@@ -11,7 +11,6 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
-
 docker-build:
   stage: build
   variables:
@@ -20,13 +19,6 @@ docker-build:
     - echo "Building docker image..."
     - docker build -t $IMAGE_TAG .
     - echo "Build complete."
-
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
 
 trivy-test-job:
   stage: test
@@ -51,7 +43,7 @@ trivy-test-job:
       - $HOME/.cache/trivy
 
 deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  stage: deploy  # It only runs when *all* jobs in the test stage complete successfully.
   variables:
     IMAGE_TAG: $CI_REGISTRY/$CI_REGISTRY_USER/$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
   script:
