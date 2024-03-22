@@ -1,6 +1,6 @@
 {
   "name": "portfolio-website-react",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Ada Cheng's Portfolio Web Site",
   "author": "adafycheng",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "css-select": "~4.2.1",
     "css-what": "^5.0.1",
     "ejs": "^3.1.7",
-    "follow-redirects": "^1.15.4",
+    "follow-redirects": "^1.15.6",
     "loader-utils": "^2.0.4",
     "minimatch": "^5.1.0",
     "nanoid": "^3.1.32",
@@ -38,7 +38,8 @@
     "semver": "^7.5.2",
     "serialize-javascript": "6.0.2",
     "svgo": "^2.8.0",
-    "terser": "5.14.2"
+    "terser": "5.14.2",
+    "webpack-dev-middleware": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
