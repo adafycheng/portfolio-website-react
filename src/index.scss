@@ -1,4 +1,10 @@
-$purple-color: rgb(219, 33, 148);
+$bright-pink-color: rgb(219, 33, 148);
+$dark-red-color: rgb(139,0,0);
+$green-yellow-color: rgb(173,255,47);
+$light-yellow-color: rgb(255,255,102);
+$pink-color: rgb(219,112,147);
+$purple-color: rgb(275,0,130);
+$slate-blue-color: rgb(106,90,205);
 
 body {
   margin: 0;
@@ -16,8 +22,9 @@ section {
 }
 
 h2 {
-  color: $purple-color;
+  color: $bright-pink-color;
   font-family: cursive;
+  font-size: 4em;
   padding-bottom: 0.5em;
 }
 
@@ -40,7 +47,7 @@ a {
  */
 
 .btn {
-  background-color: $purple-color;
+  background-color: $bright-pink-color;
   color: #fff;
   width: auto;
 }
@@ -50,18 +57,60 @@ a {
 }
 
 .intro {
-  height: 100%;
+  height: calc(75vh);
   width: 95%;
 }
 
 .introName {
-  color: $purple-color;
+  color: $bright-pink-color;
   font-family: cursive;
   font-size: 2em;
 }
 
 .profilePic {
   width: 300px;
+}
+
+.projectCard {
+  background-color: $light-yellow-color;
+  border-radius: 20px;
+  height: 100%;
+  padding: 10px;
+}
+
+.projectTitle {
+  color: $slate-blue-color;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.projectLink {
+  color: $pink-color;
+  margin: 10px;
+  padding: 10px;
+}
+
+.projectLink a {
+  color: $dark-red-color;
+  text-decoration: none;
+}
+
+.technologies {
+  color: $purple-color;
+  margin: 10px;
+  padding: 10px;
+}
+
+.technologies a {
+  color: $dark-red-color;
+  text-decoration: none;
+}
+
+a.projectLink:hover,
+.projectLink a:hover,
+.technologies a:hover {
+  color: $slate-blue-color;
+  text-decoration: none;
 }
 
 #footer {
@@ -80,7 +129,7 @@ a {
 }
 
 #footer .author {
-  color: $purple-color;
+  color: $bright-pink-color;
   font-family: cursive;
   font-size: 2em;
 }

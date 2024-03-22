@@ -80,12 +80,7 @@ const linksData = {
       alt:  'dev.to',
       src:  '/images/dev-black.png',
       href: 'https://dev.to/adafycheng'
-    },
-  {
-      alt:  'Blogspot',
-      src:  '/images/blogspot.jpg',
-      href: 'https://adafycheng-uk-life.blogspot.com'
-  }
+    }
   ]
 }
 
@@ -94,16 +89,17 @@ function App() {
     return (
         <div className="App">
             <TopNav navTitle="My Portfolio" links={linksData}>
-              <TopNavItem href="#main">Home</TopNavItem>
-              <TopNavItem href="#about">About</TopNavItem>
-              <TopNavItem href="#portfolio">Portfolio</TopNavItem>
-              <TopNavItem href="#contact">Contact</TopNavItem>
+                <TopNavItem href="#main">Home</TopNavItem>
+                <TopNavItem href="#about">About</TopNavItem>
+                <TopNavItem href="#portfolio">Portfolio</TopNavItem>
+                <TopNavItem href="#projects">Projects</TopNavItem>
+                <TopNavItem href="#contact">Contact</TopNavItem>
             </TopNav>
-            <section id="main" className="container-fluid">
+            <section id="main" className="container-fluid content">
                 <div className="d-flex align-items-center justify-content-center intro">
                     <div>
                         <h1>Hello, I'm <span className="introName">Ada Cheng</span>.</h1>
-                        <p>I'm a Java Software Developer.</p>
+                        <p>I'm a Full Stack Software Developer.</p>
                     </div>
                 </div>
             </section>
@@ -122,9 +118,9 @@ function App() {
                             </svg>
                         </div>
                         <div className="col-md-8">
-                            <h3>I'm a Java Software Developer.</h3>
+                            <h3>I'm a Full Stack Software Developer.</h3>
 
-                            <p>In past 10 years, I mainly involved in Software Development of JAVA-enabled web applications.</p>
+                            <p>In past 10 years, I mainly involved in Software Development of JAVA-enabled web applications, integrated with various database systems.</p>
 
                             <p>Recently, I'm interested in Cloud Computing. I study writing Java SpringBoot and Node.js applications in Google Cloud.</p>
 
@@ -144,9 +140,92 @@ function App() {
                         <RatingComponent heading="Java" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
                         <RatingComponent heading="Spring" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
                         <RatingComponent heading="JavaScript" subheading="12 years" rate="4" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="Node.js" subheading="1 year" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
-                        <RatingComponent heading="React" subheading="1 year" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="Node.js" subheading="2 years" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
+                        <RatingComponent heading="React" subheading="2 years" rate="2" headingColor='purple' subheadingColor='orange' starColor="green" />
                         <RatingComponent heading="Python" subheading="6 months" rate="1" headingColor='purple' subheadingColor='orange' starColor="green" />
+                    </div>
+                </div>
+            </section>
+            <section id="projects" className="container-fluid content">
+                <h2>Projects</h2>
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 Portfolio Web Site</div>
+                            <div className="projectLink">
+                                This Portfolio Web Site provide a showcase of my portfolio.<br />
+                                This is a React application.
+                            </div>
+                            <div><a className="projectLink" href="https://portfolio.adafycheng.dev">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://github.com/adafycheng/portfolio-website-react">🏰 Git Repository</a></div>
+                            <div><a className="projectLink" href="https://blog.adafycheng.dev/dockerizing-a-nodejs-web-application">📘 Blog: Dockerizing a Node.js web application</a></div>
+                            <div><a className="projectLink" href="https://blog.adafycheng.dev/deploy-a-docker-image-to-google-cloud-using-cloud-run">📗 Blog: Deploy a Docker image to Google Cloud using Cloud Run</a></div>
+                            <div className="technologies">Key Technologies: React, Docker, Google Cloud, AWS Amplify</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 Top Navigation Bar</div>
+                            <div className="projectLink">
+                                A Top Navigation bar React Component using react.js
+                            </div>
+                            <div><a className="projectLink" href="https://portfolio.adafycheng.dev">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://github.com/adafycheng/reactjs-topnav-component">🏰 Git Repository</a></div>
+                            <div><a className="projectLink" href="https://blog.adafycheng.dev/develop-a-react-component-using-create-react-library-template">📘 Blog: Develop a React Component using create-react-library template</a></div>
+                            <div className="technologies">Key Technologies: React Components</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 Tabbed Pane</div>
+                            <div className="projectLink">
+                                A tabbed pane React Component using React.js
+                            </div>
+                            <div><a className="projectLink" href="https://portfolio.adafycheng.dev">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://github.com/adafycheng/reactjs-tabbedpane-component">🏰 Git Repository</a></div>
+                            <div><a className="projectLink" href="https://blog.adafycheng.dev/develop-a-react-component-using-create-react-library-template">📘 Blog: Develop a React Component using create-react-library template</a></div>
+                            <div className="technologies">Key Technologies: React Components</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">&nbsp;</div>
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 Music Album</div>
+                            <div className="projectLink">
+                                Music Album is a Node.js application.<br />
+                                It collects my favourite songs.<br />
+                                When a song is selected, the application reads the YAML file for the song data and displays the song details and the lyrics.
+                            </div>
+                            <div><a className="projectLink" href="https://music-album-liart.vercel.app">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://github.com/adafycheng/music-album">🏰 Git Repository</a></div>
+                            <div className="technologies">Key Technologies: Node.js</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 API Specifications</div>
+                            <div className="projectLink">
+                                The API Specifications uses the <a href="https://www.npmjs.com/package/swagger-ui-react">swagger-ui-react</a> npm library to display the Open API Specifications in a Swagger UI.<br />
+                                This is a React application hosted on AWS Amplify, which is created using CDK in TypeScript.
+                            </div>
+                            <div><a className="projectLink" href="https://aws-api-specs.adafycheng.dev/">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://gitlab.com/my-study-group/aws-amplify-api-specs">🏰 Git Repository</a></div>
+                            <div className="technologies">Key Technologies: React, CDK, TypeScript, AWS Amplify</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="projectCard">
+                            <div className="projectTitle">📽 Country List</div>
+                            <div className="projectLink">
+                                A Express JS server with GraphQL integration serves requests for countries.
+                                Data is stored in a SQLite file on the server and is accessed via .
+                            </div>
+                            <div><a className="projectLink" href="https://country-list-graphql.vercel.app/">🌐 Live Demo</a></div>
+                            <div><a className="projectLink" href="https://github.com/adafycheng/country-list-graphql">🏰 Git Repository</a></div>
+                            <div className="technologies">Key Technologies: Express JS, GraphQL, SQLite, <a href="https://knexjs.org/">Knex</a></div>
+                        </div>
                     </div>
                 </div>
             </section>
